@@ -18,20 +18,20 @@ const TextOptionsModal = ({
   onFontFamilyChange,
 }) => {
   const [localFontSize, setLocalFontSize] = useState(fontSize);
-  
+
   const handleFontSizeChange = (value) => {
     setLocalFontSize(value[0]);
     onFontSizeChange(value[0]);
   };
 
   const fontFamilies = ["Caveat", "Inter", "serif", "monospace", "cursive"];
-  
+
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="icon" 
+        <Button
+          variant="outline"
+          size="icon"
           className="absolute top-0 right-0 bg-white bg-opacity-80 z-30 h-8 w-8"
         >
           <Settings2 className="h-4 w-4" />
@@ -41,7 +41,7 @@ const TextOptionsModal = ({
       <PopoverContent className="w-80">
         <div className="space-y-4">
           <h4 className="font-medium leading-none">Text Options</h4>
-          
+
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-sm">Font Size: {localFontSize}px</span>
@@ -54,7 +54,7 @@ const TextOptionsModal = ({
               onValueChange={handleFontSizeChange}
             />
           </div>
-          
+
           <div className="space-y-2">
             <label className="text-sm">Text Color</label>
             <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ const TextOptionsModal = ({
               />
             </div>
           </div>
-          
+
           <div className="space-y-2">
             <label className="text-sm">Font Family</label>
             <div className="grid grid-cols-1 gap-2">
@@ -96,4 +96,4 @@ const TextOptionsModal = ({
   );
 };
 
-export default TextOptionsModal; 
+export default TextOptionsModal;
