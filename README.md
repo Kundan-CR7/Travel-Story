@@ -20,10 +20,9 @@ TravelStory is an interactive web application that allows users to create beauti
 
 TravelStory is built using modern web technologies:
 
-- **React & TypeScript**: Component-based architecture with strong typing for maintainability
+- **React**: Component-based architecture with strong typing for maintainability
 - **Tailwind CSS**: Utility-first CSS framework for responsive and consistent styling
 - **Shadcn/UI**: High-quality UI components for a polished interface
-- **anime.js**: JavaScript animation library for smooth, engaging animations
 - **html2canvas & jsPDF**: Libraries for converting canvas content into downloadable PDFs
 - **Local Storage**: Browser storage for saving user progress between sessions
 
