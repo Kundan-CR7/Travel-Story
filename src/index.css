@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 60% 99%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 84.3% 53.7%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 84.3% 93%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 260 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 260 80% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 84.3% 53.7%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.canvas-element {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  border-radius: 2px;
+}
+
+.canvas-element:hover {
+  box-shadow: 0 0 0 2px theme('colors.travel.purple');
+}
+
+.canvas-element.active {
+  box-shadow: 0 0 0 3px theme('colors.travel.purple');
+  z-index: 10;
+}
+
+.handle-rotate {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: theme('colors.travel.purple');
+  border-radius: 50%;
+  top: -30px;
+  left: 50%;
+  margin-left: -10px;
+  cursor: move;
+  z-index: 20;
+}
+
+.handle-resize {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: theme('colors.travel.purple');
+  bottom: -5px;
+  right: -5px;
+  cursor: nwse-resize;
+  z-index: 20;
+}
+
+.text-editor {
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
