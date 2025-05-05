@@ -53,9 +53,9 @@ npm run dev
 
 ## Project Structure
 
-- `src/components/TravelCanvas.tsx`: Core canvas component for handling interactions
-- `src/components/Toolbar.tsx`: Interface for adding elements and performing actions
-- `src/components/SaveAnimation.tsx`: Animated feedback when saving progress
+- `src/components/TravelCanvas.jsx`: Core canvas component for handling interactions
+- `src/components/Toolbar.jsx`: Interface for adding elements and performing actions
+- `src/components/SaveAnimation.jsx`: Animated feedback when saving progress
 - `src/utils/exportUtils.ts`: Functions for exporting and saving canvas state
 
 ## Future Enhancements
