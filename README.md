@@ -1,81 +1,71 @@
-<<<<<<< HEAD
+# TravelStory - Interactive Travel Journal Creator
 
-# TravelStory
+## Overview
 
-=======
+TravelStory is an interactive web application that allows users to create beautiful travel journals by combining images and text on a digital canvas. Users can arrange, resize, and rotate elements to create personalized travel memories that can be saved and exported as PDF documents.
 
-# Welcome to your Lovable project
+## Features
 
-## Project info
+- **Interactive Canvas**: Drag, rotate, and resize elements freely on a digital canvas
+- **Image Upload**: Add your own travel photos to your journal
+- **Text Editing**: Add and customize text with different fonts, sizes, and colors
+- **Placeholder Images**: Quickly add travel-themed placeholder images when testing or designing
+- **Saving Progress**: Save your work-in-progress journals to continue editing later
+- **PDF Export**: Export your completed travel journals as PDF files to share or print
+- **Responsive Design**: Works across different devices and screen sizes
+- **Smooth Animations**: Engaging animations when saving and interacting with elements
+- **Intuitive Interface**: User-friendly toolbar for easy access to all functions
 
-**URL**: https://lovable.dev/projects/70385049-7690-41b4-8d84-ae3d5bb6e44f
+## Technical Approach
 
-## How can I edit this code?
+TravelStory is built using modern web technologies:
 
-There are several ways of editing your application.
+- **React & TypeScript**: Component-based architecture with strong typing for maintainability
+- **Tailwind CSS**: Utility-first CSS framework for responsive and consistent styling
+- **Shadcn/UI**: High-quality UI components for a polished interface
+- **anime.js**: JavaScript animation library for smooth, engaging animations
+- **html2canvas & jsPDF**: Libraries for converting canvas content into downloadable PDFs
+- **Local Storage**: Browser storage for saving user progress between sessions
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/70385049-7690-41b4-8d84-ae3d5bb6e44f) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Usage
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **First Launch**: You'll be greeted with a welcome screen introducing the application.
+2. **Adding Content**: Use the toolbar at the bottom to add images or text to your canvas.
+3. **Manipulating Elements**:
+   - Drag elements to position them
+   - Use the corner handles to resize or rotate
+   - Double-click text to edit its content
+4. **Customizing Text**: When a text element is selected, use the options panel to change font, size, and color.
+5. **Saving Progress**: Click the save button to store your work locally.
+6. **Exporting**: When your journal is ready, export it as a PDF using the export button.
 
-**Use GitHub Codespaces**
+## Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `src/components/TravelCanvas.tsx`: Core canvas component for handling interactions
+- `src/components/Toolbar.tsx`: Interface for adding elements and performing actions
+- `src/components/SaveAnimation.tsx`: Animated feedback when saving progress
+- `src/utils/exportUtils.ts`: Functions for exporting and saving canvas state
 
-## What technologies are used for this project?
+## Future Enhancements
 
-This project is built with:
+- Cloud storage integration for backing up journals
+- More text customization options (shadows, styles, etc.)
+- Collaboration features for shared travel journals
+- Templates for quick journal creation
+- Additional export formats (image, social media sharing)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/70385049-7690-41b4-8d84-ae3d5bb6e44f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-> > > > > > > 7ce7203 (first commit)
+[Your license information here]
